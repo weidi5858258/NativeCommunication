@@ -40,16 +40,16 @@ include_directories(
         JNI
         Daemon
 
-        ${ANDROID_INCLUDE_PATH}/system
         ${ANDROID_INCLUDE_PATH}/bionic/libc/include
         ${ANDROID_INCLUDE_PATH}/bionic/libc/kernel/uapi
         ${ANDROID_INCLUDE_PATH}/external/curl/include
         ${ANDROID_INCLUDE_PATH}/external/boringssl/include
         ${ANDROID_INCLUDE_PATH}/external/expat/lib
-        ${ANDROID_INCLUDE_PATH}/system/core/include
+        ${ANDROID_INCLUDE_PATH}/frameworks/av/include
         ${ANDROID_INCLUDE_PATH}/frameworks/native/include
         ${ANDROID_INCLUDE_PATH}/frameworks/base/include
         ${ANDROID_INCLUDE_PATH}/libnativehelper/include/nativehelper
+        ${ANDROID_INCLUDE_PATH}/system
         ${ANDROID_INCLUDE_PATH}/system/bt/include
         ${ANDROID_INCLUDE_PATH}/system/bt/bta/include
         ${ANDROID_INCLUDE_PATH}/system/bt/btcore/include
