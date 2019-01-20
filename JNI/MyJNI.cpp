@@ -105,21 +105,21 @@ jint Java_com_weidi_JniWrapper_open(
  然后在进程2中向进程1发起请求
  this here(进程2) ---> BpDaemon(进程2,传递callback) --->
                       BnDaemon(进程1,通过callback) --->
-                      BpCallback(进程1)           ---> BnCallback(进程2)
+                      BpCallback(进程1)           --->
+                      BnCallback(进程2)
  */
 int main(int argc, char *argv[]) {
 
     LOGE("-------------------- CMRD main start --------------------\n");
 
     pid_t pid = getpid();
-    LOGE("PID=%d.\n", pid);
+    LOGE("Client main() PID=%d.\n", pid);
     uid_t uid = getuid();
-    LOGE("UID= %d\n", uid);
+    LOGE("Client main() UID= %d\n", uid);
 
 //    sp<ProcessState> proc(ProcessState::self());
 //    sp<IServiceManager> sm = defaultServiceManager();
-//
-//    //addService inside in BinderService
+
 //    MyCallback::instantiate();
 
     sp<IDaemon> daemon = getDaemon();
@@ -140,6 +140,7 @@ int main(int argc, char *argv[]) {
 //    IPCThreadState::self()->joinThreadPool();
 
     LOGE("-------------------- CMRD main end --------------------\n");
+
     return 0;
 }
 

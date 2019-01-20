@@ -14,14 +14,21 @@
 
 using namespace android;
 
+/***
+ * 首先要启动这个Daemon服务,然后客户端才能连接上
+ *
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char *argv[]) {
 
     LOGE("-------------------- CMRD main start --------------------\n");
 
     pid_t pid = getpid();
-    LOGE("PID=%d.\n", pid);
+    LOGE("Daemon main() PID=%d.\n", pid);
     uid_t uid = getuid();
-    LOGE("UID= %d\n", uid);
+    LOGE("Daemon main() UID= %d\n", uid);
 
     sp<ProcessState> proc(ProcessState::self());
     sp<IServiceManager> sm = defaultServiceManager();
@@ -34,9 +41,9 @@ int main(int argc, char *argv[]) {
      如java代码通过jni方式执行native层代码,然后native层代码
      通过binder方式跟MyDaemon进行通信.
      */
-    // addService inside in BinderService
     // 先执行BnDaemon的构造方法
     // 再执行MyDaemon的构造方法
+    // addService inside in BinderService
     MyDaemon::instantiate();
 
     ProcessState::self()->startThreadPool();
