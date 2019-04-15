@@ -9,7 +9,7 @@ LOCAL_SRC_FILES:= \
     part_a/BnCallback.cpp \
     part_b/BpCallback.cpp \
 
-#LOCAL_LDLIBS    := -L$(LOCAL_PATH)/../libs/ -lABC -lSF
+#LOCAL_LDLIBS := -L$(LOCAL_PATH)/../libs/ -lABC -lSF
 
 LOCAL_C_INCLUDES := \
     bionic \
@@ -17,7 +17,7 @@ LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include \
     $(LOCAL_PATH)/Binder
 
-LOCAL_CXX_STL:=libc++
+LOCAL_CXX_STL := libc++
 
 LOCAL_SHARED_LIBRARIES := \
     libbinder \
@@ -27,7 +27,7 @@ LOCAL_SHARED_LIBRARIES := \
     liblog
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_EXECUTABLES)
-LOCAL_MODULE:= partb
+LOCAL_MODULE := partb
 
 include $(BUILD_EXECUTABLE)
 
