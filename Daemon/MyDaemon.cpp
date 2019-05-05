@@ -53,6 +53,7 @@ int MyDaemon::registerCallback(const android::sp<ICallback> &callback) {
 
 /*status_t MyDaemon::onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags) {
     LOGI("MyDaemon::onTransact() %p\n", this);
+    // 直接调用父类方法
     status_t ret = BnDaemon::onTransact(code, data, reply, flags);
     return ret;
 }*/
