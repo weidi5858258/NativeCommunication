@@ -8,6 +8,9 @@
 #include "../../include/LogDebug.h"
 #include "../../Binder/ICallback.h"
 
+/***
+客户端
+ */
 class BpCallback : public BpInterface<ICallback> {
 public:
     //需要这样定义构造方法

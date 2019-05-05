@@ -14,8 +14,13 @@
 #include "../Binder/ICallback.h"
 #include "../part_b/include/BnDaemon.h"
 
+using namespace android;
+
 /****************************** MyDaemon ******************************/
 
+/***
+一般作为系统服务,开机后就启动该服务.
+ */
 class MyDaemon :
         public BinderService<MyDaemon>,
         public BnDaemon {

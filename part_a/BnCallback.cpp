@@ -4,7 +4,8 @@
 
 #include "include/BnCallback.h"
 
-#define LOG_TAG "BnCallback"
+//#define LOG_TAG "BnCallback"
+#define LOG_TAG "alexander"
 
 BnCallback::BnCallback() {
     LOGI("BnCallback() created. %p\n", this);

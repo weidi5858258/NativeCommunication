@@ -4,7 +4,8 @@
 
 #include "include/BpDaemon.h"
 
-#define LOG_TAG "BpDaemon"
+//#define LOG_TAG "BpDaemon"
+#define LOG_TAG "alexander"
 
 IMPLEMENT_META_INTERFACE(Daemon, MYDAEMON);
 

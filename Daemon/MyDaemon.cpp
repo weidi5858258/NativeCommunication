@@ -2,9 +2,8 @@
 #include "MyDaemon.h"
 
 
-#define LOG_TAG "MyDaemon"
-
-using namespace android;
+//#define LOG_TAG "MyDaemon"
+#define LOG_TAG "alexander"
 
 /****************************** Daemon ******************************/
 
@@ -17,7 +16,7 @@ sp<ICallback> getCallback() {
     sp<IBinder> binder = serviceManager->getService(String16(SERVER_NAME_));
 
     if (binder == NULL) {
-        LOGE("getCallback() binder == NULL");
+        LOGE("getCallback() binder = NULL");
         // 返回NULL
         return sp<ICallback>(NULL);
     }
@@ -27,21 +26,15 @@ sp<ICallback> getCallback() {
 }
 
 MyDaemon::MyDaemon() {
-    LOGI("MyDaemon() created. %p\n", this);
+    LOGI("MyDaemon::MyDaemon()  created   %p\n", this);
 }
 
 MyDaemon::~MyDaemon() {
-    LOGI("MyDaemonp\n", this);
-}
-
-status_t MyDaemon::onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags) {
-    LOGI("MyDaemon::onTransact(). %p\n", this);
-    status_t ret = BnDaemon::onTransact(code, data, reply, flags);
-    return ret;
+    LOGI("MyDaemon::~MyDaemon() destroyed %p\n", this);
 }
 
 int MyDaemon::open(bool enableCapture) {
-    LOGI("MyDaemon::open() %p enableCapture = %d\n", this, enableCapture);
+    LOGI("MyDaemon::open() %p enableCapture: %d\n", this, enableCapture);
 //    getCallback()->onError(1);
     return 0;
 }
@@ -56,4 +49,10 @@ int MyDaemon::registerCallback(const android::sp<ICallback> &callback) {
 
     mCallback = callback;
     return NO_ERROR;
+}
+
+status_t MyDaemon::onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags) {
+    LOGI("MyDaemon::onTransact() %p\n", this);
+    status_t ret = BnDaemon::onTransact(code, data, reply, flags);
+    return ret;
 }

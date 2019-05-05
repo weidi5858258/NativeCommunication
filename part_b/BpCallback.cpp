@@ -4,17 +4,18 @@
 
 #include "include/BpCallback.h"
 
-#define LOG_TAG "BpCallback"
+//#define LOG_TAG "BpCallback"
+#define LOG_TAG "alexander"
 
 IMPLEMENT_META_INTERFACE(Callback, CALLBACK);
 
 BpCallback::BpCallback(const sp<IBinder> &impl)
         : BpInterface<ICallback>(impl) {
-    LOGI("BpCallback() created. %p\n", this);
+    LOGI("BpCallback::BpCallback()  created   %p\n", this);
 }
 
 BpCallback::~BpCallback() {
-    LOGI("BpCallbackestroyed. %p\n", this);
+    LOGI("BpCallback::~BpCallback() destroyed %p\n", this);
 }
 
 int BpCallback::onRecognize(size_t len,
@@ -23,7 +24,7 @@ int BpCallback::onRecognize(size_t len,
                                 int height,
                                 const char *fileName,
                                 const char *result) {
-    LOGI("BpCallback::onRecognize(6) %p captureType = %d fileName = %s", this, captureType, fileName);
+    LOGI("BpCallback::onRecognize(6) %p captureType: %d fileName: %s", this, captureType, fileName);
     Parcel data, reply;
     data.writeInterfaceToken(ICallback::getInterfaceDescriptor());
     data.writeInt32(len);
@@ -43,12 +44,12 @@ int BpCallback::onRecognize(size_t len,
     }
 
     status_t status = remote()->transact(ICallback::ON_RECOGNIZE, data, &reply);
-    LOGI("BpCallback::onRecognize(6) status=%d\n", status);
+    LOGI("BpCallback::onRecognize(6) status: %d\n", status);
     return status;
 }
 
 int BpCallback::onRecognize(int captureType, const char *result) {
-    LOGI("BpCallback::onRecognize(2) %p captureType = %d result = %s", this, captureType, result);
+    LOGI("BpCallback::onRecognize(2) %p captureType: %d result: %s", this, captureType, result);
     Parcel data, reply;
     data.writeInterfaceToken(ICallback::getInterfaceDescriptor());
     data.writeInt32(captureType);
@@ -61,16 +62,16 @@ int BpCallback::onRecognize(int captureType, const char *result) {
     }
 
     status_t status = remote()->transact(ICallback::ON_RECOGNIZE_NON_IMAGE, data, &reply);
-    LOGI("BpCallback::onRecognize(2) status=%d\n", status);
+    LOGI("BpCallback::onRecognize(2) status: %d\n", status);
     return status;
 }
 
 int BpCallback::onError(int errorCode) {
-    LOGI("BpCallback::onError() %p errorCode = %d", this, errorCode);
+    LOGI("BpCallback::onError() %p errorCode: %d", this, errorCode);
     Parcel data, reply;
     data.writeInterfaceToken(ICallback::getInterfaceDescriptor());
     data.writeInt32(errorCode);
     status_t status = remote()->transact(ICallback::ON_ERROR, data, &reply);
-    LOGI("BpCallback::onError() status=%d\n", status);
+    LOGI("BpCallback::onError() status: %d\n", status);
     return status;
 }

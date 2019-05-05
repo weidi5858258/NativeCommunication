@@ -8,6 +8,9 @@
 #include "../../include/LogDebug.h"
 #include "../../Binder/IDaemon.h"
 
+/***
+服务端
+ */
 class BnDaemon : public BnInterface<IDaemon> {
 public:
     BnDaemon();

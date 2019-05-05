@@ -1,6 +1,7 @@
 #include "MyJNI.h"
 
-#define LOG_TAG "MyJNI"
+//#define LOG_TAG "MyJNI"
+#define LOG_TAG "alexander"
 
 MyJNI::MyJNI() {
 }
@@ -110,7 +111,7 @@ jint Java_com_weidi_JniWrapper_open(
  */
 int main(int argc, char *argv[]) {
 
-    LOGE("-------------------- CMRD main start --------------------\n");
+    LOGE("-------------------- client main start --------------------\n");
 
     pid_t pid = getpid();
     LOGE("Client main() PID=%d.\n", pid);
@@ -139,7 +140,7 @@ int main(int argc, char *argv[]) {
 //    ProcessState::self()->startThreadPool();
 //    IPCThreadState::self()->joinThreadPool();
 
-    LOGE("-------------------- CMRD main end --------------------\n");
+    LOGE("-------------------- client main end --------------------\n");
 
     return 0;
 }

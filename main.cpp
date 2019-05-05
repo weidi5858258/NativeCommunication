@@ -10,7 +10,8 @@
 #include "../include/LogDebug.h"
 #include "Daemon/MyDaemon.h"
 
-#define LOG_TAG "main"
+//#define LOG_TAG "main"
+#define LOG_TAG "alexander"
 
 using namespace android;
 
@@ -23,7 +24,7 @@ using namespace android;
  */
 int main(int argc, char *argv[]) {
 
-    LOGE("-------------------- CMRD main start --------------------\n");
+    LOGE("-------------------- server main start --------------------\n");
 
     pid_t pid = getpid();
     LOGE("Daemon main() PID=%d.\n", pid);
@@ -38,8 +39,8 @@ int main(int argc, char *argv[]) {
      这些服务需要在init.rc中进行配置过.
      MyDaemon作为一个服务从android开机启动后一直常驻后台.
      通过binder通信方式跟其他进程进行通信.
-     如java代码通过jni方式执行native层代码,然后native层代码
-     通过binder方式跟MyDaemon进行通信.
+     如java代码通过jni方式执行native层代码,
+     然后native层代码通过binder通信方式跟MyDaemon进行通信.
      */
     // 先执行BnDaemon的构造方法
     // 再执行MyDaemon的构造方法
@@ -49,7 +50,7 @@ int main(int argc, char *argv[]) {
     ProcessState::self()->startThreadPool();
     IPCThreadState::self()->joinThreadPool();
 
-    LOGE("-------------------- CMRD main end --------------------\n");
+    LOGE("-------------------- server main end   --------------------\n");
 
     return 0;
 }
