@@ -16,13 +16,11 @@ add_executable(
         include/MyConst.h
         JNI/MyJNI.cpp
         JNI/MyJNI.h
-        Daemon/MyDaemon.cpp
-        Daemon/MyDaemon.h
+        Daemon/BnDaemon.cpp
+        Daemon/BnDaemon.h
         main.cpp
         part_a/BpDaemon.cpp
         part_a/include/BpDaemon.h
-        part_b/BnDaemon.cpp
-        part_b/include/BnDaemon.h
         part_b/BpCallback.cpp
         part_b/include/BpCallback.h
         part_a/BnCallback.cpp

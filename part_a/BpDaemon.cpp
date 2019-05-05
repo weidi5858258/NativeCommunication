@@ -31,7 +31,7 @@ int BpDaemon::open(bool enableCapture) {
     data.writeInt32(enableCapture);
 
     //先调用子类,由子类去调用父类
-    //MyDaemon::onTransact
+    //BnDaemon::onTransact
     //BnDaemon::onTransact
     LOGI("BpDaemon::open() remote()->transact\n");
     status_t status = remote()->transact(IDaemon::OPEN, data, &reply);
@@ -55,7 +55,7 @@ int BpDaemon::registerCallback(const android::sp<ICallback> &callback) {
     data.writeStrongBinder(IInterface::asBinder(callback));
 
     //先调用子类,由子类去调用父类
-    //MyDaemon::onTransact
+    //BnDaemon::onTransact
     //BnDaemon::onTransact
     LOGI("BpDaemon::registerCallback() remote()->transact");
     status_t status = remote()->transact(IDaemon::REGISTER_CALLBACK, data, &reply);

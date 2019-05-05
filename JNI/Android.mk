@@ -10,7 +10,6 @@ LOCAL_C_INCLUDES := \
 LOCAL_SRC_FILES:= \
     MyJNI.cpp \
     ../part_a/BpDaemon.cpp \
-    ../part_b/BnDaemon.cpp \
     ../part_a/BnCallback.cpp \
     ../part_b/BpCallback.cpp \
 

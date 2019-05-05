@@ -8,7 +8,7 @@
 #include <binder/IServiceManager.h>
 
 #include "../include/LogDebug.h"
-#include "Daemon/MyDaemon.h"
+#include "Daemon/BnDaemon.h"
 
 //#define LOG_TAG "main"
 #define LOG_TAG "alexander"
@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
     // 先执行BnDaemon的构造方法
     // 再执行MyDaemon的构造方法
     // addService inside in BinderService
-    MyDaemon::instantiate();
+    BnDaemon::instantiate();
 
     ProcessState::self()->startThreadPool();
     IPCThreadState::self()->joinThreadPool();

@@ -12,7 +12,7 @@
 #include "../include/MyConst.h"
 #include "../include/LogDebug.h"
 #include "../Binder/ICallback.h"
-#include "../part_b/include/BnDaemon.h"
+#include "../Binder/IDaemon.h"
 
 using namespace android;
 
@@ -23,12 +23,12 @@ using namespace android;
  一般作为系统服务,开机后就启动该服务.
  必须继承下面两个类才能达到"服务端和作为系统服务"的目的.
  */
-class MyDaemon :
-        public BinderService<MyDaemon>,
+class BnDaemon :
+        public BinderService<BnDaemon>,
         // 直接继承BnInterface,不再使用BnDaemon
         public BnInterface<IDaemon> {
     // 固定写法
-    friend class BinderService<MyDaemon>;
+    friend class BinderService<BnDaemon>;
 
 public:
     // 固定写法
@@ -38,9 +38,9 @@ public:
     }
 
 public:
-    MyDaemon();
+    BnDaemon();
 
-    virtual ~MyDaemon();
+    virtual ~BnDaemon();
 
     virtual int open(bool enableCapture);
 

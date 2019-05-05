@@ -3,9 +3,8 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= \
     main.cpp \
-    Daemon/MyDaemon.cpp \
+    Daemon/BnDaemon.cpp \
     part_a/BpDaemon.cpp \
-    part_b/BnDaemon.cpp \
     part_a/BnCallback.cpp \
     part_b/BpCallback.cpp \
 
