@@ -23,7 +23,9 @@ using namespace android;
  */
 class MyDaemon :
         public BinderService<MyDaemon>,
-        public BnDaemon {
+        // 直接继承BnInterface,不使用BnDaemon
+        public BnInterface<IDaemon> {
+    //public BnDaemon {
 
     friend class BinderService<MyDaemon>;
 
@@ -41,7 +43,7 @@ public:
 
     virtual int registerCallback(const sp<ICallback> &callback);
 
-    //virtual status_t onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags = 0);
+    virtual status_t onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags = 0);
 
 private:
     sp<ICallback> mCallback;
