@@ -11,20 +11,23 @@ IMPLEMENT_META_INTERFACE(Callback, CALLBACK);
 
 BpCallback::BpCallback(const sp<IBinder> &impl)
         : BpInterface<ICallback>(impl) {
-    LOGI("BpCallback::BpCallback()  created   %p\n", this);
+    pid_t pid = getpid();
+    LOGI("BpCallback::BpCallback()  created   %p PID: %d\n", this, pid);
 }
 
 BpCallback::~BpCallback() {
-    LOGI("BpCallback::~BpCallback() destroyed %p\n", this);
+    pid_t pid = getpid();
+    LOGI("BpCallback::~BpCallback() destroyed %p PID: %d\n", this, pid);
 }
 
 int BpCallback::onRecognize(size_t len,
-                                int captureType,
-                                int width,
-                                int height,
-                                const char *fileName,
-                                const char *result) {
-    LOGI("BpCallback::onRecognize(6) %p captureType: %d fileName: %s", this, captureType, fileName);
+                            int captureType,
+                            int width,
+                            int height,
+                            const char *fileName,
+                            const char *result) {
+    pid_t pid = getpid();
+    LOGI("BpCallback::onRecognize(6) %p PID: %d captureType: %d fileName: %s", this, pid, captureType, fileName);
     Parcel data, reply;
     data.writeInterfaceToken(ICallback::getInterfaceDescriptor());
     data.writeInt32(len);
@@ -49,7 +52,8 @@ int BpCallback::onRecognize(size_t len,
 }
 
 int BpCallback::onRecognize(int captureType, const char *result) {
-    LOGI("BpCallback::onRecognize(2) %p captureType: %d result: %s", this, captureType, result);
+    pid_t pid = getpid();
+    LOGI("BpCallback::onRecognize(2) %p PID: %d captureType: %d result: %s", this, pid, captureType, result);
     Parcel data, reply;
     data.writeInterfaceToken(ICallback::getInterfaceDescriptor());
     data.writeInt32(captureType);
@@ -67,7 +71,8 @@ int BpCallback::onRecognize(int captureType, const char *result) {
 }
 
 int BpCallback::onError(int errorCode) {
-    LOGI("BpCallback::onError() %p errorCode: %d", this, errorCode);
+    pid_t pid = getpid();
+    LOGI("BpCallback::onError() %p PID: %d errorCode: %d", this, pid, errorCode);
     Parcel data, reply;
     data.writeInterfaceToken(ICallback::getInterfaceDescriptor());
     data.writeInt32(errorCode);

@@ -4,6 +4,11 @@
 #define LOG_TAG "alexander"
 
 MyJNI::MyJNI() {
+    LOGI("MyJNI::MyJNI()  created   %p\n", this);
+}
+
+MyJNI::~MyJNI() {
+    LOGI("MyJNI::~MyJNI() destroyed %p\n", this);
 }
 
 static sp<ICallback> sCallback = NULL;
@@ -12,17 +17,19 @@ sp<IDaemon> getDaemon() {
     LOGI("getDaemon()");
     // 固定写法，得到android的IServiceManager对象
     sp<IServiceManager> serviceManager = defaultServiceManager();
-    //
+    // 通过SERVER_NAME名称找到服务端
     sp<IBinder> binder = serviceManager->getService(String16(SERVER_NAME));
     if (binder == NULL) {
         // 返回NULL
         return sp<IDaemon>(NULL);
     }
-
+    LOGI("getDaemon() binder: %p\n", &binder);
+    /***
+     调用下面的代码后系统会去创建BpDaemon对象
+     因为要连接到服务端,必须由BpDaemon对象完成的
+     */
     return interface_cast<IDaemon>(binder);
 }
-
-
 
 class MyCallback :
         public BinderService<MyCallback>,
@@ -37,11 +44,11 @@ public:
 
 public:
     MyCallback() {
-        LOGI("MyCallback() created. %p\n", this);
+        LOGI("MyCallback::MyCallback()  created   %p\n", this);
     }
 
     virtual ~MyCallback() {
-        LOGI("MyCallback() destroyed. %p\n", this);
+        LOGI("MyCallback::~MyCallback() destroyed %p\n", this);
     }
 
     virtual int onRecognize(size_t len,
@@ -50,19 +57,19 @@ public:
                             int height,
                             const char *fileName,
                             const char *result) {
-        LOGI("MyCallback::onRecognize(6) %p length=%d fileName=%p captureType=%#08x width=%d height=%d\n",
+        LOGI("MyCallback::onRecognize(6) %p length: %d fileName: %p captureType: %#08x width: %d height: %d\n",
              this, len, fileName, captureType, width, height);
         return RESULT_OK;
     }
 
     virtual int onRecognize(int captureType, const char *result) {
-        LOGI("MyCallback::onRecognize(2) %p captureType = %d result = %s\n",
+        LOGI("MyCallback::onRecognize(2) %p captureType: %d result: %s\n",
              this, captureType, result);
         return RESULT_OK;
     }
 
     virtual int onError(int errorCode) {
-        LOGI("MyCallback::onError() %p errorCode = %d\n", this, errorCode);
+        LOGI("MyCallback::onError() %p errorCode: %d\n", this, errorCode);
         return RESULT_OK;
     }
 
@@ -98,6 +105,7 @@ jint Java_com_weidi_JniWrapper_open(
     */
     daemon->registerCallback(sCallback);
     daemon->open(enableCapture);
+
     return 0;
 }
 
@@ -125,6 +133,7 @@ int main(int argc, char *argv[]) {
 
     sp<IDaemon> daemon = getDaemon();
     if (daemon == NULL) {
+        LOGI("Client main() daemon = NULL\n");
         return RESULT_ERR_BINDER_ERROR;
     }
 
@@ -140,7 +149,7 @@ int main(int argc, char *argv[]) {
 //    ProcessState::self()->startThreadPool();
 //    IPCThreadState::self()->joinThreadPool();
 
-    LOGE("-------------------- client main end --------------------\n");
+    LOGI("-------------------- client main end --------------------\n");
 
     return 0;
 }

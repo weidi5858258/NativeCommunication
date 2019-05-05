@@ -8,11 +8,11 @@
 #define LOG_TAG "alexander"
 
 BnCallback::BnCallback() {
-    LOGI("BnCallback() created. %p\n", this);
+    LOGI("BnCallback::BnCallback()  created   %p\n", this);
 }
 
 BnCallback::~BnCallback() {
-    LOGI("BnCallbackestroyed. %p\n", this);
+    LOGI("BnCallback::~BnCallback() destroyed %p\n", this);
 }
 
 status_t BnCallback::onTransact(
@@ -20,7 +20,8 @@ status_t BnCallback::onTransact(
         const Parcel &data,
         Parcel *reply,
         uint32_t flags) {
-    LOGI("BnCallback::onTransact(). %p\n", this);
+    pid_t pid = getpid();
+    LOGI("BnCallback::onTransact() %p PID: %d\n", this, pid);
 
     switch (code) {
         case ICallback::ON_RECOGNIZE: {
@@ -43,7 +44,7 @@ status_t BnCallback::onTransact(
                 result = data.readCString();
             }
 
-            LOGI("BnCallback::onTransact() captureType = %d resultLen = %d", captureType, resultLen);
+            LOGI("BnCallback::onTransact() ON_RECOGNIZE captureType: %d resultLen: %d\n", captureType, resultLen);
             //调用MyCallback方法
             int ret = onRecognize(len, captureType, width, height, fileName, result);
             reply->writeInt32(ret);
@@ -61,7 +62,8 @@ status_t BnCallback::onTransact(
                 result = data.readCString();
             }
 
-            LOGI("BnCallback::onTransact() captureType = %d resultLen = %d", captureType, resultLen);
+            LOGI("BnCallback::onTransact() ON_RECOGNIZE_NON_IMAGE captureType: %d resultLen: %d\n", captureType,
+                 resultLen);
             //调用MyCallback方法
             int ret = onRecognize(captureType, result);
             reply->writeInt32(ret);
@@ -72,16 +74,17 @@ status_t BnCallback::onTransact(
             LOGI("BnCallback::onTransact() ON_ERROR");
             CHECK_INTERFACE(ICallback, data, reply);
             int errorCode = data.readInt32();
-            LOGI("BnCallback::onTransact() errorCode = %d", errorCode);
+            LOGI("BnCallback::onTransact() ON_ERROR errorCode: %d", errorCode);
             //调用MyCallback方法
             int ret = onError(errorCode);
             reply->writeInt32(ret);
             break;
         }
 
-        default:
+        default: {
             LOGI("BnCallback::onTransact() default");
             return BBinder::onTransact(code, data, reply, flags);
+        }
     }
 
     return NO_ERROR;

@@ -20,6 +20,7 @@ using namespace android;
 class MyJNI {
 public:
     MyJNI();
+    virtual ~MyJNI();
 };
 
 #endif // MYJNI_H

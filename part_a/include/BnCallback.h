@@ -8,6 +8,9 @@
 #include "../../include/LogDebug.h"
 #include "../../Binder/ICallback.h"
 
+/***
+服务端
+ */
 class BnCallback : public BnInterface<ICallback> {
 public:
     BnCallback();

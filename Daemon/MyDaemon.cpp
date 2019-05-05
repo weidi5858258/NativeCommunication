@@ -40,7 +40,7 @@ int MyDaemon::open(bool enableCapture) {
 }
 
 int MyDaemon::registerCallback(const android::sp<ICallback> &callback) {
-    LOGD("MyDaemon::registerCallback() %p\n", this);
+    LOGD("MyDaemon::registerCallback() %p callback: 0x%0x\n", this, &callback);
 
     if (callback == NULL) {
         LOGD("MyDaemon::registerCallback() callback is null\n");
@@ -73,9 +73,11 @@ status_t MyDaemon::onTransact(uint32_t code,
         case IDaemon::REGISTER_CALLBACK: {
             LOGD("MyDaemon::onTransact() REGISTER_CALLBACK");
             CHECK_INTERFACE(IDaemon, data, reply);
-            //BpCallback() created. 0x40890440
+            // 会去创建BpCallback对象
+            // BpCallback() created. 0x40890440
             sp<ICallback> callback = interface_cast<ICallback>(data.readStrongBinder());
             LOGD("MyDaemon::onTransact() REGISTER_CALLBACK callback: 0x%0x", &callback);
+            LOGD("MyDaemon::onTransact() REGISTER_CALLBACK callback->onError(-2)");
             //不能直接调用MyCallback::onError(因为不在同一个进程中)
             //1.BpCallback::onError() 0x40890440 errorCode = -2
             //2.BnCallback::onTransact() ON_ERROR

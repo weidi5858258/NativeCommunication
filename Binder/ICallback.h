@@ -31,8 +31,6 @@ public:
 
     virtual int onError(int errorCode) = 0;
 
-//    virtual status_t onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags = 0) = 0;
-
 };
 
 #endif //__ICALLBACK_H__

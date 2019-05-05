@@ -33,6 +33,7 @@ class MyDaemon :
 public:
     // 固定写法
     static const char *getServiceName() {
+        // MyDaemon这个服务的名称,其他进程通过这个名称找到MyDaemon这个服务
         return SERVER_NAME;
     }
 
