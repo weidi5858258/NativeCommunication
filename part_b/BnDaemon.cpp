@@ -19,7 +19,7 @@ status_t BnDaemon::onTransact(uint32_t code,
                               uint32_t flags) {
     LOGI("BnDaemon::onTransact() %p\n", this);
     pid_t pid = getpid();
-    LOGE("BnDaemon::onTransact() PID: %d\n", pid);
+    LOGI("BnDaemon::onTransact() PID: %d\n", pid);
 
     switch (code) {
         case IDaemon::OPEN: {

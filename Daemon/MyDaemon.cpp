@@ -51,8 +51,8 @@ int MyDaemon::registerCallback(const android::sp<ICallback> &callback) {
     return NO_ERROR;
 }
 
-status_t MyDaemon::onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags) {
+/*status_t MyDaemon::onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags) {
     LOGI("MyDaemon::onTransact() %p\n", this);
     status_t ret = BnDaemon::onTransact(code, data, reply, flags);
     return ret;
-}
+}*/
