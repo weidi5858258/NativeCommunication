@@ -13,6 +13,10 @@ using namespace android;
 
 /****************************** IDaemon ******************************/
 
+/***
+ IDaemon是作为Bn端和Bp端共有的接口,不能少.
+ 而且这个接口中定义的方法在Bn端和Bp端都要有相应的对应.
+ */
 class IDaemon : public IInterface {
 public:
     /***

@@ -73,7 +73,7 @@ status_t BnDaemon::onTransact(uint32_t code,
         case IDaemon::REGISTER_CALLBACK: {
             LOGD("BnDaemon::onTransact() REGISTER_CALLBACK");
             CHECK_INTERFACE(IDaemon, data, reply);
-            // 会去创建BpCallback对象
+            // 会去创建BpCallback对象(这句代码很关键)
             // BpCallback() created. 0x40890440
             sp<ICallback> callback = interface_cast<ICallback>(data.readStrongBinder());
             LOGD("BnDaemon::onTransact() REGISTER_CALLBACK callback: 0x%0x", &callback);
@@ -81,7 +81,7 @@ status_t BnDaemon::onTransact(uint32_t code,
             //不能直接调用MyCallback::onError(因为不在同一个进程中)
             //1.BpCallback::onError() 0x40890440 errorCode = -2
             //2.BnCallback::onTransact() ON_ERROR
-            //3.MyCallback::onError() 0x4070a600 errorCode = -2
+            //3.BnCallback::onError() 0x4070a600 errorCode = -2
             callback->onError(-2);
             //BnDaemon::registerCallback
             int ret = registerCallback(callback);

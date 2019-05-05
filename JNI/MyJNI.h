@@ -13,7 +13,6 @@
 #include "ICallback.h"
 #include "IDaemon.h"
 #include "MyConst.h"
-#include "../part_a/include/BnCallback.h"
 
 using namespace android;
 

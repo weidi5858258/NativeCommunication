@@ -5,7 +5,6 @@ LOCAL_SRC_FILES:= \
     main.cpp \
     Daemon/BnDaemon.cpp \
     part_a/BpDaemon.cpp \
-    part_a/BnCallback.cpp \
     part_b/BpCallback.cpp \
 
 #LOCAL_LDLIBS := -L$(LOCAL_PATH)/../libs/ -lABC -lSF

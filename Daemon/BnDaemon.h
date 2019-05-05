@@ -21,7 +21,7 @@ using namespace android;
 /***
  服务端
  一般作为系统服务,开机后就启动该服务.
- 必须继承下面两个类才能达到"服务端和作为系统服务"的目的.
+ 必须继承下面两个类才能达到"作为服务端和作为系统服务"的目的.
  */
 class BnDaemon :
         public BinderService<BnDaemon>,

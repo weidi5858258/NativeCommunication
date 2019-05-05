@@ -31,24 +31,103 @@ sp<IDaemon> getDaemon() {
     return interface_cast<IDaemon>(binder);
 }
 
-class MyCallback :
-        public BinderService<MyCallback>,
-        public BnCallback {
-
-    friend class BinderService<MyCallback>;
+class BnCallback :
+        public BinderService<BnCallback>,
+        //public BnCallback {
+        public BnInterface<ICallback> {
+    // 固定写法
+    friend class BinderService<BnCallback>;
 
 public:
+    // 固定写法
     static const char *getServiceName() {
         return SERVER_NAME_;
     }
 
 public:
-    MyCallback() {
-        LOGI("MyCallback::MyCallback()  created   %p\n", this);
+    BnCallback() {
+        pid_t pid = getpid();
+        LOGI("BnCallback::BnCallback()  created   %p PID: %d\n", this, pid);
     }
 
-    virtual ~MyCallback() {
-        LOGI("MyCallback::~MyCallback() destroyed %p\n", this);
+    virtual ~BnCallback() {
+        pid_t pid = getpid();
+        LOGI("BnCallback::BnCallback() destroyed %p PID: %d\n", this, pid);
+    }
+
+    virtual status_t onTransact(
+            uint32_t code,
+            const Parcel &data,
+            Parcel *reply,
+            uint32_t flags) {
+        pid_t pid = getpid();
+        LOGI("BnCallback::onTransact() %p PID: %d\n", this, pid);
+
+        switch (code) {
+            case ICallback::ON_RECOGNIZE: {
+                LOGI("BnCallback::onTransact() ON_RECOGNIZE");
+                CHECK_INTERFACE(ICallback, data, reply);
+                int len = data.readInt32();
+                int captureType = data.readInt32();
+                int width = data.readInt32();
+                int height = data.readInt32();
+                const char *fileName = NULL;
+
+                if (len > 0) {
+                    fileName = data.readCString();
+                }
+
+                const char *result = NULL;
+                int resultLen = data.readInt32();
+
+                if (resultLen > 0) {
+                    result = data.readCString();
+                }
+
+                LOGI("BnCallback::onTransact() ON_RECOGNIZE captureType: %d resultLen: %d\n", captureType, resultLen);
+                //调用MyCallback方法
+                int ret = onRecognize(len, captureType, width, height, fileName, result);
+                reply->writeInt32(ret);
+                break;
+            }
+
+            case ICallback::ON_RECOGNIZE_NON_IMAGE: {
+                LOGI("BnCallback::onTransact() ON_RECOGNIZE_NON_IMAGE");
+                CHECK_INTERFACE(ICallback, data, reply);
+                int captureType = data.readInt32();
+                const char *result = NULL;
+                int resultLen = data.readInt32();
+
+                if (resultLen > 0) {
+                    result = data.readCString();
+                }
+
+                LOGI("BnCallback::onTransact() ON_RECOGNIZE_NON_IMAGE captureType: %d resultLen: %d\n", captureType,
+                     resultLen);
+                //调用MyCallback方法
+                int ret = onRecognize(captureType, result);
+                reply->writeInt32(ret);
+                break;
+            }
+
+            case ICallback::ON_ERROR: {
+                LOGI("BnCallback::onTransact() ON_ERROR");
+                CHECK_INTERFACE(ICallback, data, reply);
+                int errorCode = data.readInt32();
+                LOGI("BnCallback::onTransact() ON_ERROR errorCode: %d", errorCode);
+                //调用MyCallback方法
+                int ret = onError(errorCode);
+                reply->writeInt32(ret);
+                break;
+            }
+
+            default: {
+                LOGI("BnCallback::onTransact() default");
+                return BBinder::onTransact(code, data, reply, flags);
+            }
+        }
+
+        return NO_ERROR;
     }
 
     virtual int onRecognize(size_t len,
@@ -57,19 +136,20 @@ public:
                             int height,
                             const char *fileName,
                             const char *result) {
-        LOGI("MyCallback::onRecognize(6) %p length: %d fileName: %p captureType: %#08x width: %d height: %d\n",
+        LOGI("BnCallback::onRecognize(6) %p length: %d fileName: %p captureType: %#08x width: %d height: %d\n",
              this, len, fileName, captureType, width, height);
         return RESULT_OK;
     }
 
     virtual int onRecognize(int captureType, const char *result) {
-        LOGI("MyCallback::onRecognize(2) %p captureType: %d result: %s\n",
+        LOGI("BnCallback::onRecognize(2) %p captureType: %d result: %s\n",
              this, captureType, result);
         return RESULT_OK;
     }
 
     virtual int onError(int errorCode) {
-        LOGI("MyCallback::onError() %p errorCode: %d\n", this, errorCode);
+        pid_t pid = getpid();
+        LOGI("BnCallback::onError() %p PID: %d errorCode: %d\n", this, pid, errorCode);
         return RESULT_OK;
     }
 
@@ -92,7 +172,7 @@ jint Java_com_weidi_JniWrapper_open(
     }
 
     if (sCallback == NULL) {
-        sCallback = new MyCallback();
+        sCallback = new BnCallback();
     }
 
     /***
@@ -129,7 +209,7 @@ int main(int argc, char *argv[]) {
 //    sp<ProcessState> proc(ProcessState::self());
 //    sp<IServiceManager> sm = defaultServiceManager();
 
-//    MyCallback::instantiate();
+//    BnCallback::instantiate();
 
     sp<IDaemon> daemon = getDaemon();
     if (daemon == NULL) {
@@ -139,10 +219,15 @@ int main(int argc, char *argv[]) {
 
     if (sCallback == NULL) {
         //BnCallback() created. 0x4078a600
-        //MyCallback() created. 0x4078a600
-        sCallback = new MyCallback();
+        //BnCallback() created. 0x4078a600
+        sCallback = new BnCallback();
     }
 
+    /***
+     在getDaemon()方法中执行最后一句代码时会创建BpDaemon对象(设为bpDaemon)
+     然后通过bpDaemon对象调用registerCallback()方法,
+     接着调用到bnDaemon(服务端)的onTransact()方法.
+     */
     daemon->registerCallback(sCallback);
     daemon->open(1);
 
@@ -155,5 +240,43 @@ int main(int argc, char *argv[]) {
 }
 
 /***
+ 某次执行的结果:
+05-06 00:52:07.997 8030-8030/? D/alexander: -------------------- server main start --------------------
+05-06 00:52:07.997 8030-8030/? D/alexander: Daemon main() PID: 8030
+05-06 00:52:07.997 8030-8030/? D/alexander: Daemon main() UID: 0
+05-06 00:52:07.999 8030-8030/? D/alexander: BnDaemon::BnDaemon()  created   0x40890400
+05-06 00:52:10.169 8034-8034/? I/alexander: -------------------- client main start --------------------
+05-06 00:52:10.169 8034-8034/? I/alexander: Client main() PID: 8034
+05-06 00:52:10.169 8034-8034/? I/alexander: Client main() UID: 0
+05-06 00:52:10.169 8034-8034/? I/alexander: getDaemon()
+05-06 00:52:10.172 8034-8034/? I/alexander: getDaemon() binder: 0xbeabc970
+05-06 00:52:10.172 8034-8034/? I/alexander: BpDaemon::BpDaemon()  created   0x40810400 PID: 8034
+05-06 00:52:10.172 8034-8034/? I/alexander: BnCallback::BnCallback()  created   0x4080a5d0 PID: 8034
+05-06 00:52:10.172 8034-8034/? I/alexander: BpDaemon::registerCallback() 0x40810400 PID: 8034 callback: 0x40067004
+05-06 00:52:10.172 8034-8034/? I/alexander: BnCallback::onError() 0x4080a5d0 PID: 8034 errorCode: -1
+05-06 00:52:10.172 8034-8034/? I/alexander: BpDaemon::registerCallback() remote()->transact
+05-06 00:52:10.172 8030-8030/? D/alexander: BnDaemon::onTransact() 0x40890400 PID: 8030
+05-06 00:52:10.172 8030-8030/? D/alexander: BnDaemon::onTransact() REGISTER_CALLBACK
+05-06 00:52:10.172 8030-8030/? D/alexander: BpCallback::BpCallback()  created   0x40890420 PID: 8030
+05-06 00:52:10.172 8030-8030/? D/alexander: BnDaemon::onTransact() REGISTER_CALLBACK callback: 0xbee78854
+05-06 00:52:10.173 8030-8030/? D/alexander: BnDaemon::onTransact() REGISTER_CALLBACK callback->onError(-2)
+05-06 00:52:10.173 8030-8030/? D/alexander: BpCallback::onError() 0x40890420 PID: 8030 errorCode: -2
+05-06 00:52:10.173 8034-8034/? I/alexander: BnCallback::onTransact() 0x4080a5d0 PID: 8034
+05-06 00:52:10.173 8034-8034/? I/alexander: BnCallback::onTransact() ON_ERROR
+05-06 00:52:10.173 8034-8034/? I/alexander: BnCallback::onTransact() ON_ERROR errorCode: -2
+05-06 00:52:10.173 8034-8034/? I/alexander: BnCallback::onError() 0x4080a5d0 PID: 8034 errorCode: -2
+05-06 00:52:10.173 8030-8030/? D/alexander: BpCallback::onError() status: 0
+05-06 00:52:10.173 8030-8030/? D/alexander: BnDaemon::registerCallback() 0x40890400 callback: 0xbee78854
+05-06 00:52:10.173 8034-8034/? I/alexander: BpDaemon::registerCallback() ret: 0
+05-06 00:52:10.173 8034-8034/? I/alexander: BpDaemon::open() 0x40810400 PID: 8034 enableCapture: 1
+05-06 00:52:10.173 8034-8034/? I/alexander: BpDaemon::open() remote()->transact
+05-06 00:52:10.173 8030-8033/? D/alexander: BnDaemon::onTransact() 0x40890400 PID: 8030
+05-06 00:52:10.173 8030-8033/? D/alexander: BnDaemon::onTransact() OPEN
+05-06 00:52:10.173 8030-8033/? D/alexander: BnDaemon::onTransact() OPEN enableCapture: 1
+05-06 00:52:10.174 8030-8033/? D/alexander: BnDaemon::open() 0x40890400 enableCapture: 1
+05-06 00:52:10.174 8034-8034/? I/alexander: BpDaemon::open() ret: 0
+05-06 00:52:10.174 8034-8034/? I/alexander: -------------------- client main end --------------------
+05-06 00:52:10.174 8034-8034/? I/alexander: BpDaemon::~BpDaemon() destroyed 0x40810400 PID: 8034
+
 
 */

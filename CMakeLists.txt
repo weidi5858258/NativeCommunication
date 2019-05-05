@@ -23,8 +23,6 @@ add_executable(
         part_a/include/BpDaemon.h
         part_b/BpCallback.cpp
         part_b/include/BpCallback.h
-        part_a/BnCallback.cpp
-        part_a/include/BnCallback.h
 )
 
 ######################################################
