@@ -19,17 +19,19 @@ using namespace android;
 /****************************** MyDaemon ******************************/
 
 /***
-一般作为系统服务,开机后就启动该服务.
+ 服务端
+ 一般作为系统服务,开机后就启动该服务.
+ 必须继承下面两个类才能达到"服务端和作为系统服务"的目的.
  */
 class MyDaemon :
         public BinderService<MyDaemon>,
-        // 直接继承BnInterface,不使用BnDaemon
+        // 直接继承BnInterface,不再使用BnDaemon
         public BnInterface<IDaemon> {
-    //public BnDaemon {
-
+    // 固定写法
     friend class BinderService<MyDaemon>;
 
 public:
+    // 固定写法
     static const char *getServiceName() {
         return SERVER_NAME;
     }
@@ -43,6 +45,7 @@ public:
 
     virtual int registerCallback(const sp<ICallback> &callback);
 
+    // 必须的
     virtual status_t onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags = 0);
 
 private:

@@ -24,12 +24,12 @@ using namespace android;
  */
 int main(int argc, char *argv[]) {
 
-    LOGE("-------------------- server main start --------------------\n");
+    LOGD("-------------------- server main start --------------------\n");
 
     pid_t pid = getpid();
-    LOGE("Daemon main() PID=%d.\n", pid);
+    LOGD("Daemon main() PID: %d\n", pid);
     uid_t uid = getuid();
-    LOGE("Daemon main() UID= %d\n", uid);
+    LOGD("Daemon main() UID: %d\n", uid);
 
     sp<ProcessState> proc(ProcessState::self());
     sp<IServiceManager> sm = defaultServiceManager();
@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
     ProcessState::self()->startThreadPool();
     IPCThreadState::self()->joinThreadPool();
 
-    LOGE("-------------------- server main end   --------------------\n");
+    LOGD("-------------------- server main end   --------------------\n");
 
     return 0;
 }

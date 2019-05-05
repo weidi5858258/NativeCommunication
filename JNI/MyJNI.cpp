@@ -111,12 +111,12 @@ jint Java_com_weidi_JniWrapper_open(
  */
 int main(int argc, char *argv[]) {
 
-    LOGE("-------------------- client main start --------------------\n");
+    LOGI("-------------------- client main start --------------------\n");
 
     pid_t pid = getpid();
-    LOGE("Client main() PID=%d.\n", pid);
+    LOGI("Client main() PID: %d\n", pid);
     uid_t uid = getuid();
-    LOGE("Client main() UID= %d\n", uid);
+    LOGI("Client main() UID: %d\n", uid);
 
 //    sp<ProcessState> proc(ProcessState::self());
 //    sp<IServiceManager> sm = defaultServiceManager();
