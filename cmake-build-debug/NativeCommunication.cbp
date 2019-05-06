@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="NativeCommunication"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NativeCommunication">
+				<Option output="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/NativeCommunication" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/bionic/libc/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/bionic/libc/kernel/uapi"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/curl/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/boringssl/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/expat/lib"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/av/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/native/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/base/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/libnativehelper/include/nativehelper"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/bta/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/btcore/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/btif/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/device/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/embdrv/sbc/decoder/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/embdrv/sbc/encoder/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/hci/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/osi/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/profile/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/stack/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/udrv/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/vendor_libs/test_vendor_lib/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/vnd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/adf/libadf/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/adf/libadfhwc/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/base/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/fs_mgr/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/healthd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libcrypto_utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libion/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libmemunreachable/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libnativeloader/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libpackagelistparser/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libpixelflinger/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libprocessgroup/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsparse/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsuspend/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsync/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/logwrapper/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/metricsd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/toolbox/upstream-netbsd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/trusty/libtrusty/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/libfec/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/libpagemap/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/perfprofd/quipper/kernel-headers/tools/perf/util/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/perfprofd/quipper/original-kernel-headers/tools/perf/util/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/simpleperf/nonlinux_support/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/tests/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/gatekeeper/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/keymaster/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/alsa_utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_effects/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_route/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/camera/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/private/camera/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/private/radio/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/radio/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/nativepower/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/netd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/security/keystore/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/security/softkeymaster/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/update_engine/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/update_engine/client_library/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 NativeCommunication"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NativeCommunication/fast">
+				<Option output="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/NativeCommunication" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/bionic/libc/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/bionic/libc/kernel/uapi"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/curl/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/boringssl/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/expat/lib"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/av/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/native/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/base/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/libnativehelper/include/nativehelper"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/bta/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/btcore/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/btif/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/device/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/embdrv/sbc/decoder/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/embdrv/sbc/encoder/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/hci/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/osi/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/profile/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/stack/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/udrv/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/vendor_libs/test_vendor_lib/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/vnd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/adf/libadf/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/adf/libadfhwc/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/base/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/fs_mgr/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/healthd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libcrypto_utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libion/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libmemunreachable/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libnativeloader/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libpackagelistparser/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libpixelflinger/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libprocessgroup/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsparse/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsuspend/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsync/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/logwrapper/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/metricsd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/toolbox/upstream-netbsd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/trusty/libtrusty/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/libfec/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/libpagemap/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/perfprofd/quipper/kernel-headers/tools/perf/util/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/perfprofd/quipper/original-kernel-headers/tools/perf/util/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/simpleperf/nonlinux_support/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/tests/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/gatekeeper/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/keymaster/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/alsa_utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_effects/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_route/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_utils/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/camera/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/private/camera/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/private/radio/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/radio/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/nativepower/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/netd/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/security/keystore/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/security/softkeymaster/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/update_engine/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/update_engine/client_library/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 NativeCommunication/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder/ICallback.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder/IDaemon.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include/LogDebug.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include/MyConst.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/include/BpDaemon.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/include/BpCallback.h">
+			<Option target="NativeCommunication"/>
+		</Unit>
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

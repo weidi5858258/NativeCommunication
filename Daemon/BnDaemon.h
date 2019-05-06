@@ -33,7 +33,8 @@ class BnDaemon :
 public:
     // 固定写法
     static const char *getServiceName() {
-        // MyDaemon这个服务的名称,其他进程通过这个名称找到MyDaemon这个服务
+        // BnDaemon这个服务的名称
+        // 其他进程要通过这个名称才能找到BnDaemon服务
         return SERVER_NAME;
     }
 
@@ -46,11 +47,12 @@ public:
 
     virtual int registerCallback(const sp<ICallback> &callback);
 
-    // 必须的
+    // 必须的(Bn端才会有这个方法,Bp端是没有这个方法的)
     virtual status_t onTransact(uint32_t code, const Parcel &data, Parcel *reply, uint32_t flags = 0);
 
 private:
     sp<ICallback> mCallback;
+
 };
 
 #endif // __MY_DAEMON_H__

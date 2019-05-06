@@ -11,6 +11,11 @@ IMPLEMENT_META_INTERFACE(Daemon, MYDAEMON);
 
 /****************************** BpDaemon ******************************/
 
+/***
+ Bp端的构造方法不是程序员调用的
+ 由interface_cast<IDaemon>(binder);触发.
+ 此代码在哪个进程执行,那么Bp端的构造方法就在哪个进程执行
+ */
 BpDaemon::BpDaemon(const sp<IBinder> &impl)
         : BpInterface<IDaemon>(impl) {
     pid_t pid = getpid();

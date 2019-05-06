@@ -1,0 +1,96 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/main.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../Binder"
+  "../include"
+  "../JNI"
+  "../Daemon"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/bionic/libc/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/bionic/libc/kernel/uapi"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/curl/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/boringssl/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/external/expat/lib"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/av/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/native/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/frameworks/base/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/libnativehelper/include/nativehelper"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/bta/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/btcore/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/btif/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/device/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/embdrv/sbc/decoder/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/embdrv/sbc/encoder/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/hci/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/osi/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/profile/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/stack/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/udrv/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/utils/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/vendor_libs/test_vendor_lib/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/bt/vnd/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/adf/libadf/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/adf/libadfhwc/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/base/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/fs_mgr/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/healthd/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libcrypto_utils/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libion/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libmemunreachable/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libnativeloader/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libpackagelistparser/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libpixelflinger/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libprocessgroup/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsparse/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsuspend/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/libsync/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/logwrapper/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/metricsd/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/toolbox/upstream-netbsd/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/core/trusty/libtrusty/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/libfec/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/libpagemap/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/perfprofd/quipper/kernel-headers/tools/perf/util/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/perfprofd/quipper/original-kernel-headers/tools/perf/util/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/simpleperf/nonlinux_support/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/extras/tests/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/gatekeeper/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/keymaster/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/alsa_utils/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_effects/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_route/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/audio_utils/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/camera/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/private/camera/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/private/radio/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/media/radio/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/nativepower/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/netd/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/security/keystore/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/security/softkeymaster/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/update_engine/include"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/system/update_engine/client_library/include"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

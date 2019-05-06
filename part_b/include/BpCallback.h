@@ -13,7 +13,7 @@
  */
 class BpCallback : public BpInterface<ICallback> {
 public:
-    //需要这样定义构造方法
+    // 需要这样定义构造方法
     BpCallback(const sp<IBinder> &impl);
 
     virtual ~BpCallback();

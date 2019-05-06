@@ -14,7 +14,7 @@ BpDaemon ---> BnDaemon ---> BpCallback ---> BnCallback
 先记录上面两种方式的共同部分.
 1.
 定义IDaemon.h和ICallback.h
-class IDaemon : public IInterface {...}
+class IDaemon   : public IInterface {...}
 class ICallback : public IInterface {...}
 //固定写法,去掉前面的"I",不能乱命名
 DECLARE_META_INTERFACE(Daemon);

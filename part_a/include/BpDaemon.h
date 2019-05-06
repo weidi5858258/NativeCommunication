@@ -17,7 +17,7 @@
  */
 class BpDaemon : public BpInterface<IDaemon> {
 public:
-    //需要这样定义构造方法(指的是括号中的参数)
+    // 需要这样定义构造方法(指的是括号中的参数)
     BpDaemon(const sp<IBinder> &impl);
 
     virtual ~BpDaemon();
@@ -25,6 +25,7 @@ public:
     virtual int open(bool enableCapture);
 
     virtual int registerCallback(const sp<ICallback> &callback);
+
 };
 
 
