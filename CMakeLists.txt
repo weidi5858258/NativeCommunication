@@ -27,10 +27,10 @@ add_executable(
 
 ######################################################
 
-set(ANDROID_INCLUDE_PATH
-        /root/mydev/android_source/sonyo_uroboros2/android/o-sony)
 #set(ANDROID_INCLUDE_PATH
-#        /root/mydev/android_source/lineageos)
+#        /root/mydev/android_source/sonyo_uroboros2/android/o-sony)
+set(ANDROID_INCLUDE_PATH
+        /root/mydev/android_source/lineageos)
 
 include_directories(
         include

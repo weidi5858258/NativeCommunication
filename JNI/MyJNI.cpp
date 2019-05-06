@@ -18,6 +18,11 @@ sp<IDaemon> getDaemon() {
     // 固定写法，得到android的IServiceManager对象
     sp<IServiceManager> serviceManager = defaultServiceManager();
     // 通过SERVER_NAME名称找到服务端
+    /***
+     binder不为NULL时,表示可以得到系统服务.
+     如果为NULL,那么可能是客户端没有权限去得到服务端的对象.
+     所以这里的binder是否为NULL很关键.
+     */
     sp<IBinder> binder = serviceManager->getService(String16(SERVER_NAME));
     if (binder == NULL) {
         // 返回NULL

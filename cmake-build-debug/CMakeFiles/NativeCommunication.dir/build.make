@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /root/mydev/tools/clion-2018.3.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /root/mydev/tools/clion-2018.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /root/mydev/tools/clion-2018.3.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /root/mydev/tools/clion-2018.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication
+CMAKE_SOURCE_DIR = /root/mydev/android_source/lineageos/vendor/NativeCommunication
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug
+CMAKE_BINARY_DIR = /root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/NativeCommunication.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/NativeCommunication.dir/flags.make
 
 CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o: CMakeFiles/NativeCommunication.dir/flags.make
 CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o: ../JNI/MyJNI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o -c /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o"
+	/usr/bin/g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o -c /root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI/MyJNI.cpp
 
 CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp > CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.i
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI/MyJNI.cpp > CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.i
 
 CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp -o CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.s
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI/MyJNI.cpp -o CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.s
 
 CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o: CMakeFiles/NativeCommunication.dir/flags.make
 CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o: ../Daemon/BnDaemon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o -c /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o"
+	/usr/bin/g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o -c /root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon/BnDaemon.cpp
 
 CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp > CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.i
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon/BnDaemon.cpp > CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.i
 
 CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp -o CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.s
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon/BnDaemon.cpp -o CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.s
 
 CMakeFiles/NativeCommunication.dir/main.cpp.o: CMakeFiles/NativeCommunication.dir/flags.make
 CMakeFiles/NativeCommunication.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NativeCommunication.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/main.cpp.o -c /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NativeCommunication.dir/main.cpp.o"
+	/usr/bin/g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/main.cpp.o -c /root/mydev/android_source/lineageos/vendor/NativeCommunication/main.cpp
 
 CMakeFiles/NativeCommunication.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NativeCommunication.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp > CMakeFiles/NativeCommunication.dir/main.cpp.i
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/lineageos/vendor/NativeCommunication/main.cpp > CMakeFiles/NativeCommunication.dir/main.cpp.i
 
 CMakeFiles/NativeCommunication.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NativeCommunication.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp -o CMakeFiles/NativeCommunication.dir/main.cpp.s
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/lineageos/vendor/NativeCommunication/main.cpp -o CMakeFiles/NativeCommunication.dir/main.cpp.s
 
 CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o: CMakeFiles/NativeCommunication.dir/flags.make
 CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o: ../part_a/BpDaemon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o -c /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o"
+	/usr/bin/g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o -c /root/mydev/android_source/lineageos/vendor/NativeCommunication/part_a/BpDaemon.cpp
 
 CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp > CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.i
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/lineageos/vendor/NativeCommunication/part_a/BpDaemon.cpp > CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.i
 
 CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp -o CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.s
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/lineageos/vendor/NativeCommunication/part_a/BpDaemon.cpp -o CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.s
 
 CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o: CMakeFiles/NativeCommunication.dir/flags.make
 CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o: ../part_b/BpCallback.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o -c /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o"
+	/usr/bin/g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o -c /root/mydev/android_source/lineageos/vendor/NativeCommunication/part_b/BpCallback.cpp
 
 CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp > CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.i
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/mydev/android_source/lineageos/vendor/NativeCommunication/part_b/BpCallback.cpp > CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.i
 
 CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp -o CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.s
+	/usr/bin/g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/mydev/android_source/lineageos/vendor/NativeCommunication/part_b/BpCallback.cpp -o CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.s
 
 # Object files for target NativeCommunication
 NativeCommunication_OBJECTS = \
@@ -140,7 +140,7 @@ NativeCommunication: CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o
 NativeCommunication: CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o
 NativeCommunication: CMakeFiles/NativeCommunication.dir/build.make
 NativeCommunication: CMakeFiles/NativeCommunication.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable NativeCommunication"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable NativeCommunication"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NativeCommunication.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/NativeCommunication.dir/clean:
 .PHONY : CMakeFiles/NativeCommunication.dir/clean
 
 CMakeFiles/NativeCommunication.dir/depend:
-	cd /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/mydev/android_source/lineageos/vendor/NativeCommunication /root/mydev/android_source/lineageos/vendor/NativeCommunication /root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug /root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug /root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/NativeCommunication.dir/depend
 

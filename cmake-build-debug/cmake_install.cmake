@@ -1,4 +1,4 @@
-# Install script for directory: /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication
+# Install script for directory: /root/mydev/android_source/lineageos/vendor/NativeCommunication
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
