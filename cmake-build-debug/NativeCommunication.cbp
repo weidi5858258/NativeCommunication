@@ -8,36 +8,36 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NativeCommunication">
-				<Option output="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/NativeCommunication" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option output="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/NativeCommunication" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Binder"/>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/include"/>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI"/>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon"/>
 					<Add directory="/root/mydev/android_source/lineageos/bionic/libc/include"/>
 					<Add directory="/root/mydev/android_source/lineageos/bionic/libc/kernel/uapi"/>
 					<Add directory="/root/mydev/android_source/lineageos/external/curl/include"/>
@@ -106,33 +106,33 @@
 					<Add directory="/root/mydev/android_source/lineageos/system/security/softkeymaster/include"/>
 					<Add directory="/root/mydev/android_source/lineageos/system/update_engine/include"/>
 					<Add directory="/root/mydev/android_source/lineageos/system/update_engine/client_library/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 NativeCommunication"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 NativeCommunication"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NativeCommunication/fast">
-				<Option output="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/NativeCommunication" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option output="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/NativeCommunication" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Binder"/>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/include"/>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI"/>
-					<Add directory="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI"/>
+					<Add directory="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon"/>
 					<Add directory="/root/mydev/android_source/lineageos/bionic/libc/include"/>
 					<Add directory="/root/mydev/android_source/lineageos/bionic/libc/kernel/uapi"/>
 					<Add directory="/root/mydev/android_source/lineageos/external/curl/include"/>
@@ -201,73 +201,73 @@
 					<Add directory="/root/mydev/android_source/lineageos/system/security/softkeymaster/include"/>
 					<Add directory="/root/mydev/android_source/lineageos/system/update_engine/include"/>
 					<Add directory="/root/mydev/android_source/lineageos/system/update_engine/client_library/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 NativeCommunication/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 NativeCommunication/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug"/>
+				<Option working_dir="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Binder/ICallback.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder/ICallback.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Binder/IDaemon.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Binder/IDaemon.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon/BnDaemon.cpp">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon/BnDaemon.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI/MyJNI.cpp">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI/MyJNI.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/include/LogDebug.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include/LogDebug.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/include/MyConst.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/include/MyConst.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/main.cpp">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/part_a/BpDaemon.cpp">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/part_a/include/BpDaemon.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/include/BpDaemon.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/part_b/BpCallback.cpp">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/part_b/include/BpCallback.h">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/include/BpCallback.h">
 			<Option target="NativeCommunication"/>
 		</Unit>
-		<Unit filename="/root/mydev/android_source/lineageos/vendor/NativeCommunication/CMakeLists.txt">
+		<Unit filename="/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

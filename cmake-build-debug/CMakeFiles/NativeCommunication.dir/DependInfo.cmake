@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/mydev/android_source/lineageos/vendor/NativeCommunication/Daemon/BnDaemon.cpp" "/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o"
-  "/root/mydev/android_source/lineageos/vendor/NativeCommunication/JNI/MyJNI.cpp" "/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o"
-  "/root/mydev/android_source/lineageos/vendor/NativeCommunication/main.cpp" "/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/main.cpp.o"
-  "/root/mydev/android_source/lineageos/vendor/NativeCommunication/part_a/BpDaemon.cpp" "/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o"
-  "/root/mydev/android_source/lineageos/vendor/NativeCommunication/part_b/BpCallback.cpp" "/root/mydev/android_source/lineageos/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/Daemon/BnDaemon.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/Daemon/BnDaemon.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/JNI/MyJNI.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/JNI/MyJNI.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/main.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/main.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_a/BpDaemon.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/part_a/BpDaemon.cpp.o"
+  "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/part_b/BpCallback.cpp" "/root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir/part_b/BpCallback.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
