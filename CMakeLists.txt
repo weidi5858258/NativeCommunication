@@ -30,7 +30,7 @@ add_executable(
 #set(ANDROID_INCLUDE_PATH
 #        /root/mydev/android_source/sonyo_uroboros2/android/o-sony)
 set(ANDROID_INCLUDE_PATH
-        /root/mydev/android_source/lineageos)
+        /root/mydev/android_source/hikey970/aosp/)
 
 include_directories(
         include
@@ -47,6 +47,7 @@ include_directories(
         ${ANDROID_INCLUDE_PATH}/frameworks/native/include
         ${ANDROID_INCLUDE_PATH}/frameworks/base/include
         ${ANDROID_INCLUDE_PATH}/libnativehelper/include/nativehelper
+        ${ANDROID_INCLUDE_PATH}/libnativehelper/include_jni
         ${ANDROID_INCLUDE_PATH}/system
         ${ANDROID_INCLUDE_PATH}/system/bt/include
         ${ANDROID_INCLUDE_PATH}/system/bt/bta/include
