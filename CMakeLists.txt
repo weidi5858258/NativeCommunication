@@ -1,0 +1,111 @@
+cmake_minimum_required(VERSION 3.9.6)#3.12
+project(NativeCommunication)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(Binder)
+include_directories(include)
+include_directories(JNI)
+include_directories(Daemon)
+
+add_executable(
+        NativeCommunication
+        Binder/IDaemon.h
+        Binder/ICallback.h
+        include/LogDebug.h
+        include/MyConst.h
+        JNI/MyJNI.cpp
+        JNI/MyJNI.h
+        Daemon/BnDaemon.cpp
+        Daemon/BnDaemon.h
+        main.cpp
+        part_a/BpDaemon.cpp
+        part_a/include/BpDaemon.h
+        part_b/BpCallback.cpp
+        part_b/include/BpCallback.h
+)
+
+######################################################
+
+#set(ANDROID_INCLUDE_PATH
+#        /root/mydev/android_source/sonyo_uroboros2/android/o-sony)
+set(ANDROID_INCLUDE_PATH
+        /media/root/alexander/lineage_os_5t)
+
+include_directories(
+        include
+        Binder
+        JNI
+        Daemon
+
+        ${ANDROID_INCLUDE_PATH}/system/logging/liblog/include
+        ${ANDROID_INCLUDE_PATH}/bionic/libc/include
+        ${ANDROID_INCLUDE_PATH}/bionic/libc/kernel/uapi
+        ${ANDROID_INCLUDE_PATH}/external/curl/include
+        ${ANDROID_INCLUDE_PATH}/external/boringssl/include
+        ${ANDROID_INCLUDE_PATH}/external/expat/lib
+        ${ANDROID_INCLUDE_PATH}/frameworks/av/include
+        ${ANDROID_INCLUDE_PATH}/frameworks/native/include
+        ${ANDROID_INCLUDE_PATH}/frameworks/base/include
+        ${ANDROID_INCLUDE_PATH}/libnativehelper/include/nativehelper
+        ${ANDROID_INCLUDE_PATH}/libnativehelper/include_jni
+        ${ANDROID_INCLUDE_PATH}/system
+        ${ANDROID_INCLUDE_PATH}/system/bt/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/bta/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/btcore/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/btif/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/device/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/embdrv/sbc/decoder/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/embdrv/sbc/encoder/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/hci/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/osi/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/profile/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/stack/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/udrv/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/utils/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/vendor_libs/test_vendor_lib/include
+        ${ANDROID_INCLUDE_PATH}/system/bt/vnd/include
+        ${ANDROID_INCLUDE_PATH}/system/core/include
+        ${ANDROID_INCLUDE_PATH}/system/core/adf/libadf/include
+        ${ANDROID_INCLUDE_PATH}/system/core/adf/libadfhwc/include
+        ${ANDROID_INCLUDE_PATH}/system/core/base/include
+        ${ANDROID_INCLUDE_PATH}/system/core/fs_mgr/include
+        ${ANDROID_INCLUDE_PATH}/system/core/healthd/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libcrypto_utils/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libion/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libmemunreachable/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libnativeloader/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libpackagelistparser/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libpixelflinger/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libprocessgroup/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libsparse/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libsuspend/include
+        ${ANDROID_INCLUDE_PATH}/system/core/libsync/include
+        ${ANDROID_INCLUDE_PATH}/system/core/logwrapper/include
+        ${ANDROID_INCLUDE_PATH}/system/core/metricsd/include
+        ${ANDROID_INCLUDE_PATH}/system/core/toolbox/upstream-netbsd/include
+        ${ANDROID_INCLUDE_PATH}/system/core/trusty/libtrusty/include
+        ${ANDROID_INCLUDE_PATH}/system/extras/libfec/include
+        ${ANDROID_INCLUDE_PATH}/system/extras/libpagemap/include
+        ${ANDROID_INCLUDE_PATH}/system/extras/perfprofd/quipper/kernel-headers/tools/perf/util/include
+        ${ANDROID_INCLUDE_PATH}/system/extras/perfprofd/quipper/original-kernel-headers/tools/perf/util/include
+        ${ANDROID_INCLUDE_PATH}/system/extras/simpleperf/nonlinux_support/include
+        ${ANDROID_INCLUDE_PATH}/system/extras/tests/include
+        ${ANDROID_INCLUDE_PATH}/system/gatekeeper/include
+        ${ANDROID_INCLUDE_PATH}/system/keymaster/include
+        ${ANDROID_INCLUDE_PATH}/system/media/alsa_utils/include
+        ${ANDROID_INCLUDE_PATH}/system/media/audio/include
+        ${ANDROID_INCLUDE_PATH}/system/media/audio_effects/include
+        ${ANDROID_INCLUDE_PATH}/system/media/audio_route/include
+        ${ANDROID_INCLUDE_PATH}/system/media/audio_utils/include
+        ${ANDROID_INCLUDE_PATH}/system/media/camera/include
+        ${ANDROID_INCLUDE_PATH}/system/media/private/camera/include
+        ${ANDROID_INCLUDE_PATH}/system/media/private/radio/include
+        ${ANDROID_INCLUDE_PATH}/system/media/radio/include
+        ${ANDROID_INCLUDE_PATH}/system/nativepower/include
+        ${ANDROID_INCLUDE_PATH}/system/netd/include
+        ${ANDROID_INCLUDE_PATH}/system/security/keystore/include
+        ${ANDROID_INCLUDE_PATH}/system/security/softkeymaster/include
+        ${ANDROID_INCLUDE_PATH}/system/update_engine/include
+        ${ANDROID_INCLUDE_PATH}/system/update_engine/client_library/include
+)
