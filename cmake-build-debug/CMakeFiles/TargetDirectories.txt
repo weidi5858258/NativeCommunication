@@ -1,3 +1,0 @@
-/root/mydev/github/NativeCommunication/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/root/mydev/github/NativeCommunication/cmake-build-debug/CMakeFiles/edit_cache.dir
-/root/mydev/github/NativeCommunication/cmake-build-debug/CMakeFiles/NativeCommunication.dir
