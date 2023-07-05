@@ -30,7 +30,7 @@ add_executable(
 #set(ANDROID_INCLUDE_PATH
 #        /root/mydev/android_source/sonyo_uroboros2/android/o-sony)
 set(ANDROID_INCLUDE_PATH
-        /root/mydev/android_source/hikey970/aosp/)
+        /media/root/alexander/lineage_os_5t)
 
 include_directories(
         include
@@ -38,6 +38,7 @@ include_directories(
         JNI
         Daemon
 
+        ${ANDROID_INCLUDE_PATH}/system/logging/liblog/include
         ${ANDROID_INCLUDE_PATH}/bionic/libc/include
         ${ANDROID_INCLUDE_PATH}/bionic/libc/kernel/uapi
         ${ANDROID_INCLUDE_PATH}/external/curl/include

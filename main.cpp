@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 
     /***
      在android启动的时候,由系统启动时的init进程启动其他服务,
-     这些服务需要在init.rc中进行配置过.
+     这些服务需要在init.rc中进行配置.
      MyDaemon作为一个服务从android开机启动后一直常驻后台.
      通过binder通信方式跟其他进程进行通信.
      如java代码通过jni方式执行native层代码,

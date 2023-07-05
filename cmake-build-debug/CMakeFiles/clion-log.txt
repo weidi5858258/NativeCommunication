@@ -1,4 +1,4 @@
-/root/mydev/tools/clion-2018.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication
+/root/mydev/tools/clion-2020.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /root/mydev/github/NativeCommunication
 -- Configuring done
 -- Generating done
--- Build files have been written to: /root/mydev/android_source/sonyo_uroboros2/android/o-sony/vendor/NativeCommunication/cmake-build-debug
+-- Build files have been written to: /root/mydev/github/NativeCommunication/cmake-build-debug

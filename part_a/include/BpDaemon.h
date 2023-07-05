@@ -12,9 +12,8 @@
 #include "../../Binder/IDaemon.h"
 #include "../../include/MyConst.h"
 
-/***
-客户端
- */
+/****************************** 客户端 ******************************/
+
 class BpDaemon : public BpInterface<IDaemon> {
 public:
     // 需要这样定义构造方法(指的是括号中的参数)
